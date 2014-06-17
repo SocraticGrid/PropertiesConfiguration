@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <display-name>PropertiesConfiguration</display-name>
+
+	<!-- QUARTZ -->
+	<context-param>
+		<param-name>quartz:config-file</param-name>
+		<param-value>quartz_cron.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>quartz:shutdown-on-unload</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>quartz:wait-on-shutdown</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>quartz:start-on-load</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+    <!-- LISTENER -->
+	<listener>
+		<listener-class>
+			org.socraticgrid.properties.quartz.QuartzListener
+		</listener-class>
+	</listener>
+
+</web-app>

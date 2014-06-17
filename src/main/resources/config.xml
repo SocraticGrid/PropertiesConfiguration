@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<properties>
+		<property name="example" value="example_value" />
+		<property name="example2" value="example_value2" />
+	</properties>
+	<environments default="dev-local">
+		<environment id="dev-local">
+			<property name="agent.name" value="kmf-fhir-agent" />
+			<property name="agent.node" value="kmf-fhir-agent-localnode" />
+			<property name="agent.endpoint.ip" value="localhost" />
+			<property name="agent.endpoint.port" value="8081" />
+			<property name="ucs.endpoint" value="http://172.31.5.68:8080/UCS/client" />
+			<property name="orders.endpoint" value="http://172.31.5.68:8080/OrderService/ordermanagement" />
+			<property name="alerting.endpoint" value="http://172.31.5.72:8080/KMFUCSAlerting/ucsalerting" />
+		</environment>
+		<environment id="172.31.5.68">
+			<property name="agent.name" value="kmf-fhir-agent" />
+			<property name="agent.node" value="kmf-fhir-agent-localnode" />
+			<property name="agent.endpoint.ip" value="172.31.5.68" />
+			<property name="agent.endpoint.port" value="8080" />
+			<property name="ucs.endpoint" value="http://172.31.5.68:8080/UCS/client" />
+			<property name="orders.endpoint" value="http://172.31.5.68:8080/OrderService/ordermanagement" />
+			<property name="alerting.endpoint" value="http://172.31.5.72:8080/KMFUCSAlerting/ucsalerting" />
+		</environment>
+	</environments>
+</configuration>

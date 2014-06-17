@@ -1,0 +1,25 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT configuration (properties,environments)>
+<!ATTLIST configuration
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT properties (property)+>
+<!ATTLIST properties
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT environments (environment)>
+<!ATTLIST environments
+    xmlns CDATA #FIXED ''
+    default NMTOKEN #REQUIRED>
+
+<!ELEMENT environment (property)+>
+<!ATTLIST environment
+    xmlns CDATA #FIXED ''
+    id NMTOKEN #REQUIRED>
+
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+    xmlns CDATA #FIXED ''
+    name NMTOKEN #REQUIRED
+    value NMTOKEN #REQUIRED>
